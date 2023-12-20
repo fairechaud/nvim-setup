@@ -16,7 +16,8 @@ require("mason-lspconfig").setup({
     "tsserver",
     "rust_analyzer",
     "vimls",
-  }
+    "marksman",
+    }
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -24,6 +25,20 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("lspconfig").lua_ls.setup {
   capabilities = capabilities,
 }
+require("lspconfig").pylyzer.setup {
+  capabilities = capabilities,
+}
+require("lspconfig").marksman.setup {
+  capabilities = capabilities,
+}
+require("lspconfig").rust_analyzer.setup {
+  capabilities = capabilities,
+}
+require("lspconfig").tsserver.setup {
+  capabilities = capabilities,
+}
+
+
 
 
 local lsp = require('lsp-zero')
