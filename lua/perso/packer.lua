@@ -10,7 +10,6 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
 
   -- Lua
 use {
@@ -47,4 +46,10 @@ end
 		  {'rafamadriz/friendly-snippets'},
 	  }
 }
+-- Color themes and other customization plugins
+use('Mofiqul/dracula.nvim')
+use({'catppuccin/nvim', as = "catpuccin"})
+use('ellisonleao/gruvbox.nvim')
+use({ 'rose-pine/neovim', as = 'rose-pine' })
+use({'feline-nvim/feline.nvim', branch = '0.5-compat'})
 end)
